@@ -1,0 +1,91 @@
+﻿<Page x:Class="Typographia.Pages.EmpMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:local="clr-namespace:Typographia.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="999" d:DesignWidth="1920"
+      Title="EmpMenu">
+
+    <Grid Background="White">
+        <ui:TextBlock Margin="32,102,1714,0" TextWrapping="Wrap" Text="Приветстуем, " VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock Name="txtUserName" Margin="206,102,1540,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="32,159,1623,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Text="Информация о себе"/>
+            <Run Language="ru-ru" Text=":"/>
+        </ui:TextBlock>
+        <ui:TextBlock Name="txtFName"  Margin="32,405,1623,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="txtLName"  Margin="32,482,1623,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="txtContactDetails"  Margin="32,558,1623,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="txtPreferences"  Margin="32,630,1623,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="txtLogin"  Margin="32,256,1623,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="txtPassword"  Margin="32,331,1623,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Left" Text="" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="32,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Логин"/>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="32,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Пароль"/>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="32,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Имя"/>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="32,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Фамимлия"/>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="32,526,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Номер телефона"/>
+        </ui:TextBlock>
+    </Grid>
+</Page>

@@ -1,0 +1,66 @@
+﻿<Page x:Class="Typographia.Pages.AdminNotification"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:local="clr-namespace:Typographia.Pages"
+      mc:Ignorable="d" 
+    d:DesignHeight="999" d:DesignWidth="1920"
+      Title="AdminNotification">
+    <Page.Resources>
+        <local:BoolToColorConverter x:Key="BoolToColorConverter"/>
+    </Page.Resources>
+
+    <Grid Background="White">
+        <DataGrid x:Name="NotificationsDataGrid" Width="1200" AutoGenerateColumns="False" Margin="85,330,635,329" IsReadOnly="True" MouseDoubleClick="NotificationsDataGrid_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id notification" Binding="{Binding Id_notification}" Width="200"/>
+                <DataGridTextColumn Header="Id orders" Binding="{Binding Id_orders}" Width="200"/>
+                <DataGridTextColumn Header="Id material" Binding="{Binding Id_material}" Width="200"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="200"/>
+                <DataGridTextColumn Header="Message" Binding="{Binding Message}" Width="200"/>
+                <DataGridTemplateColumn Header="IsRead" Width="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Ellipse 
+                Width="10" 
+                Height="10" 
+                Fill="{Binding IsRead, Converter={StaticResource BoolToColorConverter}}" 
+                StrokeThickness="1" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ui:TextBlock  Margin="0,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Center" Width="342">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Уведомления"/>
+            <LineBreak/>
+            <Run Language="ru-ru"/>
+        </ui:TextBlock>
+        <ui:TextBlock  Margin="85,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="1200">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Нажмите на уведомление, чтобы прочитать его"/>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="textMessage"  Margin="1326,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="340" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="538">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text=""/>
+            <LineBreak/>
+            <Run Language="ru-ru"/>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="textNadpis"  Margin="960,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="904">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Текст уведомления"/>
+        </ui:TextBlock>
+    </Grid>
+</Page>

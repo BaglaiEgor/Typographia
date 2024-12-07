@@ -1,0 +1,37 @@
+﻿<Page x:Class="Typographia.Pages.AdminNav"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+      xmlns:local="clr-namespace:Typographia.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="81" d:DesignWidth="1920"
+      Title="AdminNav">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Stroke="Black" Width="1920" Fill="#FFC7C7C7" Height="81" VerticalAlignment="Center">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="WhiteSmoke" ShadowDepth="0" BlurRadius="200" Opacity="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <ui:TextBlock Margin="32,24,1750,0" TextWrapping="Wrap" Text="Типография" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name ="txtBalance"  Margin="1543,32,272,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="26" FontSize="18" TextAlignment="Center" HorizontalAlignment="Left">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:Button Content="Заказы и их детали" HorizontalAlignment="Left" Margin="430,32,0,0" VerticalAlignment="Top" Height="26" Width="194" BorderThickness="0" HorizontalContentAlignment="Left" Padding="20,0,0,0" Click="Button_Click_2"/>
+        <ui:Button Content="Выйти                      (∪.∪ )...zzz" HorizontalAlignment="Left" Margin="1696,32,0,0" VerticalAlignment="Top" Height="26" Width="194" BorderThickness="0" HorizontalContentAlignment="Left" Padding="20,0,0,0" Click="Button_Click_5"/>
+        <ui:Button Content="Клиенты и сотрудники" HorizontalAlignment="Left" Margin="200,32,0,0" VerticalAlignment="Top" Height="26" Width="194" BorderThickness="0" HorizontalContentAlignment="Left" Padding="20,0,0,0" Click="Button_Click_1"/>
+        <ui:Button Content="Отчётность и аналитика" HorizontalAlignment="Left" Margin="1124,32,0,0" VerticalAlignment="Top" Height="26" Width="194" BorderThickness="0" HorizontalContentAlignment="Left" Padding="20,0,0,0" Click="Button_Click_4"/>
+        <ui:Button Content="Регламент и продукты" HorizontalAlignment="Left" Margin="661,32,0,0" VerticalAlignment="Top" Height="26" Width="194" BorderThickness="0" HorizontalContentAlignment="Left" Padding="20,0,0,0" Click="Button_Click"/>
+        <ui:Button Content="Уведомления" HorizontalAlignment="Left" Margin="895,32,0,0" VerticalAlignment="Top" Height="26" Width="194" BorderThickness="0" HorizontalContentAlignment="Left" Padding="20,0,0,0" Click="Button_Click_6"/>
+
+
+    </Grid>
+</Page>

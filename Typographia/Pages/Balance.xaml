@@ -1,0 +1,39 @@
+﻿<Page x:Class="Typographia.Pages.Balance"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:local="clr-namespace:Typographia.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="999" d:DesignWidth="1920"
+      Title="Balance">
+
+    <Grid Background="White">
+        <DataGrid x:Name="Transactions" AutoGenerateColumns="False" CanUserAddRows="False" Margin="915,356,45,153" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding ClientFullName}" Width="450"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding TransactionAmount}" Width="165"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding TransactionType}" Width="250"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ui:TextBlock Text="История операций"  Margin="960,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="870">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock Text="Баланс"  Margin="0,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Center" Width="1066">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock Text="Транзакции"  Margin="90,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="870">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBox Name="txtBalanceChange" HorizontalAlignment="Left" Margin="390,464,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270" Height="36"/>
+        <ui:Button Content="Пополнить" HorizontalAlignment="Left" Margin="390,500,0,0" VerticalAlignment="Top" Height="25" Width="135" Click="Button_Click"/>
+        <ui:Button Content="Снять" HorizontalAlignment="Left" Margin="525,500,0,0" VerticalAlignment="Top" Height="25" Width="135" Click="Button_Click_1"/>
+    </Grid>
+</Page>

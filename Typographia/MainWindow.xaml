@@ -1,0 +1,16 @@
+﻿<Window x:Class="Typographia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Typographia"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <Frame x:Name="MainFrame" Content ="MainFrame" NavigationUIVisibility="Hidden" Margin="0,81,0,0"/>
+        <Frame x:Name="NavPanel" Content="NavPanel" Margin="0,0,0,999" Visibility="Hidden" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

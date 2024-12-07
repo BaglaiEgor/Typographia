@@ -1,0 +1,105 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Typographia.Pages"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="Typographia.Pages.Order"
+      mc:Ignorable="d" 
+      d:DesignHeight="999" d:DesignWidth="1920"
+      Title="Order">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="OrdersDataGrid" AutoGenerateColumns="False" SelectionMode="Single" Margin="85,330,771,329" 
+  Grid.Column="0" SelectionChanged="OrdersDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id orders" Binding="{Binding Id_orders}" IsReadOnly="True" Width="70"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="120"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Name_status}" Width="120"/>
+                <DataGridTextColumn Header="Total cost" Binding="{Binding Total_cost}" Width="120"/>
+            </DataGrid.Columns>
+            <System:String>&gt;</System:String>
+        </DataGrid>
+        <DataGrid x:Name="ProductDataGrid" AutoGenerateColumns="False" SelectionMode="Single" Margin="550,329,336,330" 
+Grid.Column="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="200" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Cost" Binding="{Binding Cost}" Width="130" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Max count" Binding="{Binding MaxProductionQuantity}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+            <System:String>&gt;</System:String>
+        </DataGrid>
+        <ui:TextBlock  Margin="85,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="440">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Заказы"/>
+        </ui:TextBlock>
+        <ui:TextBlock  Margin="550,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="410">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Продукты"/>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="textDetails"  Margin="1075,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="730" Grid.ColumnSpan="2">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Text="Детали "/>
+            <Run Language="ru-ru" Text="выбранного"/>
+            <Run Text=" заказа"/>
+        </ui:TextBlock>
+        <DataGrid x:Name="OrdersDetailsDataGrid" AutoGenerateColumns="False" SelectionMode="Single" Margin="1075,330,115,330" 
+            Grid.Column="0" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id orders" Binding="{Binding Id_orders}" Width="120" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Name product" Binding="{Binding Name_product}" Width="170" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="70" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="120" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Color scheme" Binding="{Binding Color_scheme}" Width="120" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Cost" Binding="{Binding Cost}" Width="120" IsReadOnly="True"/>
+            </DataGrid.Columns>
+            <System:String>&gt;</System:String>
+        </DataGrid>
+        <ui:TextBlock  Margin="789,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="342">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Заказы"/>
+        </ui:TextBlock>
+        <ui:Button Content="Оформить заказ" HorizontalAlignment="Left" Margin="85,711,0,0" VerticalAlignment="Top" Height="32" Width="110" Click="Button_Click"/>
+        <ui:Button x:Name="butDetails" Content="Добавить к заказу" IsEnabled="False" HorizontalAlignment="Left" Margin="74,855,0,0" VerticalAlignment="Top" Height="32" Width="110" Click="Button_Click_1" Grid.Column="1"/>
+        <TextBox x:Name="txtSize"  Margin="144,719,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left" Width="148" Grid.Column="1"/>
+        <TextBox x:Name="txtGama"  Margin="144,796,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left" Width="185" Grid.Column="1"/>
+        <TextBox x:Name="txtProduct"  Margin="1276,720,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Center" Text="" HorizontalAlignment="Left" Width="148" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtCount"  Margin="1276,794,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontSize="24" TextAlignment="Left" Text="" HorizontalAlignment="Left" Width="148" Grid.ColumnSpan="2"/>
+        <ui:TextBlock x:Name="textProdD" Margin="1276,690,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Продукт"/>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="textKolD" Margin="1276,766,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Width="133" Grid.ColumnSpan="2">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Количество&#x9;"/>
+        </ui:TextBlock>
+        <ui:TextBlock x:Name="TextSizeD" Margin="144,691,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Grid.Column="1">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Размер"/>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="144,766,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" FontSize="24" TextAlignment="Center" HorizontalAlignment="Left" Grid.Column="1">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Цветовая гамма"/>
+        </ui:TextBlock>
+    </Grid>
+</Page>

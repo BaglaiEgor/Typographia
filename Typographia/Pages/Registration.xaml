@@ -1,0 +1,84 @@
+﻿<Page x:Class="Typographia.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Typographia"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Registration">
+    <Grid Background ="White" Margin="52,0,-52,0">
+        <ui:TextBlock Margin="196,149,1296,0" TextWrapping="Wrap" Text="Регистрация" VerticalAlignment="Top" Height="76" FontSize="48" TextAlignment="Center">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="264,312,0,0" TextWrapping="Wrap" Text="Пароль*" VerticalAlignment="Top" Height="26" Width="116" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="264,246,0,0" TextWrapping="Wrap" Text="Логин*" VerticalAlignment="Top" Height="26" Width="118" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="#FF96A0A0" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <TextBox x:Name="txtLogin" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="264,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284" SelectionChanged="Login_SelectionChanged"/>
+        <TextBox x:Name="txtPassword" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="264,338,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284" SelectionChanged="txtPassword_SelectionChanged"/>
+        <TextBox x:Name="txtContactDetails" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="264,404,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284" SelectionChanged="txtContactDetails_SelectionChanged"/>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="264,444,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Height="26" Width="116" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <TextBox x:Name="txtFName" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="264,465,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284"/>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="264,505,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Height="26" Width="116" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <TextBox x:Name="txtLName" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="264,531,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284"/>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="264,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="168" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Номер телефона*"/>
+        </ui:TextBlock>
+        <TextBox x:Name="txtPreferences" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="264,597,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284"/>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="264,571,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="146" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+            <Run Language="ru-ru" Text="Предпочтения"/>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="756,29,868,0" TextWrapping="Wrap" Text="Авторизация" VerticalAlignment="Top" Height="76" FontSize="48" TextAlignment="Center">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock Margin="1264,149,228,0" TextWrapping="Wrap" Text="Вход" VerticalAlignment="Top" Height="76" Width="428" FontSize="48" TextAlignment="Center">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="1336,312,0,0" TextWrapping="Wrap" Text="Пароль*" VerticalAlignment="Top" Height="26" Width="118" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <ui:TextBlock HorizontalAlignment="Left" Margin="1336,246,0,0" TextWrapping="Wrap" Text="Логин или номер телефона*" VerticalAlignment="Top" Height="26" Width="246" FontSize="18">
+            <ui:TextBlock.Effect>
+                <DropShadowEffect Color="#FF96A0A0" ShadowDepth="0" BlurRadius="10" Opacity="1"/>
+            </ui:TextBlock.Effect>
+        </ui:TextBlock>
+        <TextBox x:Name="txtUsLogin" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="1336,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284" SelectionChanged="txtUsLogin_SelectionChanged"/>
+        <TextBox x:Name="txtUsPassword" BorderBrush="Black" BorderThickness="2" Padding="5" HorizontalAlignment="Left" Margin="1336,338,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="40" Width="284" SelectionChanged="txtUsPassword_SelectionChanged"/>
+        <CheckBox x:Name="chkAgree" Content="Я согласен с условиями пользовательского соглашения" HorizontalAlignment="Left" Margin="264,642,0,0" VerticalAlignment="Top" Click="chkAgree_Click" Width="328"/>
+        <ui:Button x:Name="buttReg" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="264,662,0,0" VerticalAlignment="Top" Height="44" Width="284" IsEnabled="False" Click="buttReg_Click"/>
+        <ui:Button x:Name="buttLog" Content="Войти" HorizontalAlignment="Left" Margin="1336,391,0,0" VerticalAlignment="Top" Height="44" Width="284" IsEnabled="False" Click="buttLog_Click"/>
+        <TextBox x:Name="code" HorizontalAlignment="Left" Margin="1650,862,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="40" SelectionChanged="code_SelectionChanged" Visibility="Hidden"/>
+        <ui:Button x:Name="admin" Content="Войти" HorizontalAlignment="Left" Margin="1650,912,0,0" VerticalAlignment="Top" Width="200" Height="40" IsEnabled="False" Click="admin_Click" Visibility="Hidden"/>
+        <Image x:Name="qrCodeImage" Width="150" Height="150" Margin="1676,684,94,0" VerticalAlignment="Top" Visibility="Hidden"/>
+    </Grid>
+</Page>

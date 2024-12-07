@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b15bf09b1ef49d881f6df3b9eceb41b" Name="Diagram1">
+        <EntityTypeShape EntityType="TipografiyaModel.Clients" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Equipment" Width="1.5" PointX="6" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Materials" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Notification" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Order_details" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Orders" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Product" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.ProductMaterialRequirement" Width="1.5" PointX="8.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Stages" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Status" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Transactions" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Type_equipment" Width="1.5" PointX="3.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipografiyaModel.Work_report" Width="1.5" PointX="8.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="TipografiyaModel.FK_Orders_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Transactions_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Orders_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Equipment_Type_equipment" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_ProductMaterialRequirement_Equipment" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_ProductMaterialRequirement_Materials" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Notification_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Order_details_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Order_details_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Orders_Stages" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_Orders_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TipografiyaModel.FK_ProductMaterialRequirement_Product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
